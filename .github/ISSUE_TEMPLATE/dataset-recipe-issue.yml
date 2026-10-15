@@ -1,0 +1,25 @@
+name: Dataset / recipe issue
+description: A problem with the decision dataset or the recipe that trains on it.
+labels: [dataset]
+body:
+  - type: dropdown
+    id: part
+    attributes:
+      label: Which part
+      options: [the dataset (a row, a field, the schema, the licence), the recipe (the container, a dependency, a result)]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: the tag or the `PROVENANCE.json` digest
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: for a row — its `decision_id`; for the recipe — the command and its output
+    validations:
+      required: true

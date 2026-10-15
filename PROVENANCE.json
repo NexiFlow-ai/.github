@@ -1,0 +1,86 @@
+{
+  "unit": "org",
+  "repository": "NexiFlow-ai/.github",
+  "source_tag": "public/org/v0.1.0",
+  "source_commit": "02a33644900908e3fc17ce506e2a64b9c5b6a5b6",
+  "version": "0.1.0",
+  "exported_at": "2026-10-15T07:11:16.444Z",
+  "guard_version": "2026.10.14-2",
+  "allowlist_entries": 2,
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug.yml",
+      "sha256": "a327d60cbb9951313646862bb3261bd40fdec3053c813d6e334a5db91de5ef4f"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "38f3eed9258d9fef59134b8ca43160adf4affe2a620e55e41548034ceead448d"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/dataset-recipe-issue.yml",
+      "sha256": "db307a86ce12005f094e8ab4bd260f8a9ab1b920bd0346aa3896bda975afe0ed"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/docs-issue.yml",
+      "sha256": "041bb5db9af2dc7bd10fb166044100c72c602ddc3ad018ef6153f989be1e6b2b"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/pack-proposal.yml",
+      "sha256": "cdb47db5f9ed2d81759d63f4ae2abd74cdc96e733d4d626e175937795aa5e123"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/skill-proposal.yml",
+      "sha256": "c801609963563f88bf11d62ec3e4b95c4ddf7122538595ad2fb8e89fcd8cc543"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "88852fd0855ad95fba2570b84bb5f59a3896d812029cb254b679c2931f7c0a0d"
+    },
+    {
+      "path": ".github/workflows/dco.yml",
+      "sha256": "42443e3effb252387773a540093397fe38227cedfd5c3c1325ababc7842278a1"
+    },
+    {
+      "path": "CODEOWNERS",
+      "sha256": "5dcd664d36106fe98bd907dc6a88236270a05264f12d49c5ce922dfbb946caff"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "16e1d043939f6df1f3587156ab16497d47e1cb679fc098f83dca867d8f27dde8"
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "sha256": "b8c52e65f4d2abf4a92497ee45356ccaffbd95cacc8b4fcce2d705c62b3aa54e"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "409a0281252db98d5639642566db2bb4543f060c5cb014895cb6f610999c0204"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ceaafc899fcbeb86b79f2ee925910b61c18931574761c5d4794b29a236f343dd"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "11030bc8caaad4961d95134cff55f39a9f455276f0880472a5f30baecb5c981d"
+    },
+    {
+      "path": "SUPPORT.md",
+      "sha256": "6b267d0c3621a6563f65441f1b756d252982d2786f8252ce117d6aa48157bdb6"
+    },
+    {
+      "path": "TRADEMARKS.md",
+      "sha256": "59f1beb949bdf802a79bb802792af5ea0a4a4ce921c90847fd5b25b4d0838088"
+    },
+    {
+      "path": "profile/README.md",
+      "sha256": "30c42bdd4208674062d305662c3831abfdb3099273b2808835134a1defb9b33f"
+    }
+  ],
+  "export_digest": "229ab729a3c4f1cc26e46d01899d2c665572d8ee29a106458c5ff29ea5e19ff5"
+}

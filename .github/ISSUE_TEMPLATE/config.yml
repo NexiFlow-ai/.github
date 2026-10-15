@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A question
+    url: https://github.com/orgs/NexiFlow-ai/discussions
+    about: Questions go to Discussions, not issues.
+  - name: A security problem
+    url: https://github.com/NexiFlow-ai/.github/blob/main/SECURITY.md
+    about: Never a public issue — use private vulnerability reporting on the repository concerned.

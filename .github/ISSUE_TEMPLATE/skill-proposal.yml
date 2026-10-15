@@ -1,0 +1,30 @@
+name: Skill proposal
+description: Propose a skill — an instruction and evaluation package, no tools, no model, no credentials.
+labels: [skill, proposal]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name and one line
+      placeholder: "summarise-thread — a faithful summary of a conversation in the reader's language"
+    validations:
+      required: true
+  - type: textarea
+    id: io
+    attributes:
+      label: Input and output
+      description: what the skill takes and what it returns (the shape, with one example of each)
+    validations:
+      required: true
+  - type: textarea
+    id: judged
+    attributes:
+      label: How it is judged
+      description: the examples and the evaluation a reviewer would run before publishing it
+  - type: dropdown
+    id: licence
+    attributes:
+      label: Licence of what you would contribute
+      options: [Apache-2.0, other (say which below)]
+    validations:
+      required: true

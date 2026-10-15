@@ -1,0 +1,24 @@
+name: Docs issue
+description: A page is wrong, unclear, out of date or missing.
+labels: [docs]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: the address on docs.nexiflow.ai
+      placeholder: https://docs.nexiflow.ai/docs/…
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: quote the sentence when you can, and say what it should say or what is missing
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options: [English, Українська, both]

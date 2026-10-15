@@ -1,0 +1,34 @@
+name: Pack proposal
+description: Propose a pack for the commons — what it does, for whom, what it needs.
+labels: [pack, proposal]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name and one line
+      placeholder: "sales-outreach — a sequence of three touches with an approval before each send"
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who uses it and when
+    validations:
+      required: true
+  - type: textarea
+    id: contents
+    attributes:
+      label: What is in it
+      description: the agents, skills, flows and tools it declares; which existing packs it builds on
+  - type: textarea
+    id: needs
+    attributes:
+      label: What it needs from the platform
+      description: capabilities, tools, connections — anything the pack asks for at install
+  - type: dropdown
+    id: licence
+    attributes:
+      label: Licence of what you would contribute
+      options: [Apache-2.0, other (say which below)]
+    validations:
+      required: true

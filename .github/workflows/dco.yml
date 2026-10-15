@@ -1,0 +1,44 @@
+# DCO check for every pull request of every NexiFlow repository — no CLA, no third-party app.
+# Reusable: a repository calls it with `uses: NexiFlow-ai/.github/.github/workflows/dco.yml@main`; this repository
+# runs it on its own pull requests too. Every commit of the pull request must carry a `Signed-off-by:` line whose
+# address matches the commit author or committer (the Developer Certificate of Origin, developercertificate.org).
+name: dco
+
+on:
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  dco:
+    name: every commit signed off
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: check the sign-off on every commit of the pull request
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          missing=0
+          while read -r sha; do
+            [[ -z "$sha" ]] && continue
+            author=$(git show -s --format='%ae' "$sha")
+            committer=$(git show -s --format='%ce' "$sha")
+            if ! git show -s --format='%B' "$sha" | grep -Eiq "^Signed-off-by: .+ <(${author//./\\.}|${committer//./\\.})>\s*$"; then
+              echo "::error::commit ${sha:0:12} has no Signed-off-by line matching its author ($author) or committer ($committer)"
+              missing=$((missing + 1))
+            fi
+          done < <(git rev-list "$BASE..$HEAD")
+          if (( missing > 0 )); then
+            echo "::error::$missing commit(s) without a DCO sign-off — add 'Signed-off-by: Your Name <you@example.com>' (git commit -s), see CONTRIBUTING.md"
+            exit 1
+          fi
+          echo "every commit of $BASE..$HEAD is signed off"

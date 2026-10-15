@@ -1,0 +1,31 @@
+name: Bug
+description: Something does not work — a pack, the toolkit, the workshop, a page's behaviour.
+labels: [bug]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: the repository and the tag (or the `PROVENANCE.json` digest) you used
+      placeholder: nexi-skills v0.3.1
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: what you did, what you expected, what happened instead — the exact message when there is one
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: the shortest path that shows it
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Not a security problem
+      options:
+        - label: This is not a security problem (those go through private vulnerability reporting — SECURITY.md).
+          required: true
